@@ -10,6 +10,7 @@
   "company",
   "abbr",
   "naming_series",
+  "name1",
   "account_name",
   "location_of_property",
   "type_of_loan",
@@ -194,12 +195,18 @@
    "options": "Loan Files",
    "print_hide": 1,
    "read_only": 1
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "label": "name",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-28 13:51:30.025680",
+ "modified": "2023-09-28 19:23:43.148431",
  "modified_by": "Administrator",
  "module": "Loan Files",
  "name": "Loan Files",

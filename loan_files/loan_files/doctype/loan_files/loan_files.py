@@ -14,6 +14,7 @@ class LoanFiles(Document):
 		self.calculate_commission_due()
 		self.calculate_vendor_commission_due()
 		self.validate_loan_value()
+		self.db_set("name1", self.name, update_modified=True)
 
 	def before_save(self):
 		self.calculate_commission_due()
