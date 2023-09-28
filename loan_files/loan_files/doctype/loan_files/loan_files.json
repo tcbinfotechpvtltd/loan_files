@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "naming_series:naming_series",
  "creation": "2023-09-28 02:53:14.795178",
  "default_view": "List",
@@ -109,7 +108,8 @@
    "fieldname": "commission",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Commission"
+   "label": "Commission",
+   "permlevel": 1
   },
   {
    "allow_on_submit": 1,
@@ -122,19 +122,22 @@
    "allow_on_submit": 1,
    "fieldname": "commission_to_be_given",
    "fieldtype": "Float",
-   "label": "Commission to be given"
+   "label": "Commission to be given",
+   "permlevel": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "commission_already_given",
    "fieldtype": "Float",
-   "label": "Commission already given"
+   "label": "Commission already given",
+   "permlevel": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "commission_due_to_give",
    "fieldtype": "Float",
    "label": "Commission due to give",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -146,13 +149,15 @@
    "fieldname": "commission_receive",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Commission Received"
+   "label": "Commission Received",
+   "permlevel": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "commission_due",
    "fieldtype": "Float",
    "label": "Commission Due",
+   "permlevel": 1,
    "read_only": 1
   },
   {
@@ -191,11 +196,10 @@
    "read_only": 1
   }
  ],
- "force_re_route_to_default_view": 0,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-28 04:02:44.167887",
+ "modified": "2023-09-28 13:51:30.025680",
  "modified_by": "Administrator",
  "module": "Loan Files",
  "name": "Loan Files",
