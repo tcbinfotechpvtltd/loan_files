@@ -1,0 +1,296 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:naming_series",
+ "creation": "2023-09-28 02:53:14.795178",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "abbr",
+  "naming_series",
+  "account_name",
+  "location_of_property",
+  "type_of_loan",
+  "bank_name",
+  "value_of_loan",
+  "value_of_property",
+  "commission",
+  "vendor",
+  "commission_to_be_given",
+  "commission_already_given",
+  "commission_due_to_give",
+  "column_break_xkmoo",
+  "commission_receive",
+  "commission_due",
+  "state",
+  "status",
+  "status_history",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "allow_on_submit": 1,
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Company",
+   "options": "Custom Company",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "abbr",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Abbr",
+   "read_only": 1
+  },
+  {
+   "default": "LF-.{abbr}.-.##.-.{account_name}.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Naming Series",
+   "options": "LF-.{abbr}.-.##.-.{account_name}.",
+   "print_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "account_name",
+   "fieldtype": "Data",
+   "label": "Account Name",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "location_of_property",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Location of Property",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "type_of_loan",
+   "fieldtype": "Select",
+   "in_filter": 1,
+   "label": "Type of Loan",
+   "options": "Mortgage\nUnsecured",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "bank_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Bank Name",
+   "options": "Bank name",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "value_of_loan",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Value of Loan",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "value_of_property",
+   "fieldtype": "Float",
+   "label": "Value of Property"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Commission"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "Vendor"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_to_be_given",
+   "fieldtype": "Float",
+   "label": "Commission to be given"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_already_given",
+   "fieldtype": "Float",
+   "label": "Commission already given"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_due_to_give",
+   "fieldtype": "Float",
+   "label": "Commission due to give",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_xkmoo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_receive",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Commission Received"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_due",
+   "fieldtype": "Float",
+   "label": "Commission Due",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "state",
+   "fieldtype": "Table",
+   "label": "State",
+   "options": "Status",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "no_copy": 1,
+   "options": "Draft\nFile Discussion\nDocuments Received\nOur Queries Given\nQueries Received\nAssessment\nLogin\nBank Login Queries\nLogin Completion\nCredit Queries\nSanction\nTechnical Assessment\nLegel Assessment\nOps\nDocket\nDisbursement\nCheques Handover\nCompletion",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status_history",
+   "fieldtype": "Text Editor",
+   "label": "Status History",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loan Files",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Loan Files",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "force_re_route_to_default_view": 1,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-28 04:02:44.167887",
+ "modified_by": "Administrator",
+ "module": "Loan Files",
+ "name": "Loan Files",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Orange",
+   "title": "File Discussion"
+  },
+  {
+   "color": "Blue",
+   "title": "Documents Received"
+  },
+  {
+   "color": "Blue",
+   "title": "Our Queries Given"
+  },
+  {
+   "color": "Blue",
+   "title": "Queries Received"
+  },
+  {
+   "color": "Blue",
+   "title": "Assessment"
+  },
+  {
+   "color": "Blue",
+   "title": "Login"
+  },
+  {
+   "color": "Blue",
+   "title": "Bank Login Queries"
+  },
+  {
+   "color": "Blue",
+   "title": "Login Completion"
+  },
+  {
+   "color": "Blue",
+   "title": "Credit Queries"
+  },
+  {
+   "color": "Blue",
+   "title": "Sanction"
+  },
+  {
+   "color": "Blue",
+   "title": "Technical Assessment"
+  },
+  {
+   "color": "Blue",
+   "title": "Legel Assessment"
+  },
+  {
+   "color": "Blue",
+   "title": "Ops"
+  },
+  {
+   "color": "Blue",
+   "title": "Docket"
+  },
+  {
+   "color": "Blue",
+   "title": "Disbursement"
+  },
+  {
+   "color": "Green",
+   "title": "Cheques Handover"
+  }
+ ],
+ "track_changes": 1
+}
