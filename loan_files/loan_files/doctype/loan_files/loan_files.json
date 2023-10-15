@@ -1,7 +1,8 @@
 {
  "actions": [],
+ "allow_rename": 1,
  "autoname": "naming_series:naming_series",
- "creation": "2023-09-28 02:53:14.795178",
+ "creation": "2023-09-20 22:14:41.713814",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -10,25 +11,95 @@
   "company",
   "abbr",
   "naming_series",
-  "name1",
   "account_name",
   "location_of_property",
   "type_of_loan",
-  "bank_name",
-  "value_of_loan",
-  "value_of_property",
-  "commission",
   "vendor",
   "commission_to_be_given",
   "commission_already_given",
   "commission_due_to_give",
-  "column_break_xkmoo",
+  "col1",
+  "bank_name",
+  "value_of_loan",
+  "value_of_property",
+  "commission",
   "commission_receive",
   "commission_due",
   "state",
   "status",
+  "doc_state",
   "status_history",
-  "amended_from"
+  "amended_from",
+  "column_break_fvhlj",
+  "file_discussion",
+  "documents_received",
+  "our_queries_given",
+  "queries_received",
+  "assessment",
+  "login",
+  "bank_login_queries",
+  "credit_queries",
+  "login_completion",
+  "sanction",
+  "technical_assessment",
+  "legel_assessment",
+  "ops",
+  "docket",
+  "disbursement",
+  "cheques_handover",
+  "column_break_1vmej",
+  "submit",
+  "revert",
+  "submit1",
+  "revert1",
+  "submit2",
+  "revert2",
+  "submit3",
+  "revert3",
+  "submit4",
+  "revert4",
+  "submit5",
+  "revert5",
+  "submit6",
+  "revert6",
+  "submit7",
+  "revert7",
+  "submit8",
+  "revert8",
+  "submit9",
+  "revert9",
+  "submit10",
+  "revert10",
+  "submit11",
+  "revert11",
+  "submit12",
+  "revert12",
+  "submit13",
+  "revert13",
+  "submit14",
+  "revert14",
+  "submit15",
+  "revert15",
+  "file_discussion_state",
+  "documents_received_state",
+  "our_queries_given_state",
+  "queries_received_state",
+  "assessment_state",
+  "login_state",
+  "bank_login_queries_state",
+  "login_completion_state",
+  "credit_queries_state",
+  "sanction_state",
+  "technical_assessment_state",
+  "legel_assessment_state",
+  "ops_state",
+  "docket_state",
+  "disbursement_state",
+  "cheques_handover_state",
+  "file_completed",
+  "file_completed_state",
+  "file_is_submittable",
+  "file_vendor_is_submittable"
  ],
  "fields": [
   {
@@ -49,12 +120,12 @@
    "read_only": 1
   },
   {
-   "default": "LF-.{abbr}.-.##.-.{account_name}.",
+   "default": "LF-.{abbr}.-",
    "fieldname": "naming_series",
    "fieldtype": "Select",
    "hidden": 1,
    "label": "Naming Series",
-   "options": "LF-.{abbr}.-.##.-.{account_name}.",
+   "options": "LF-.{abbr}.-",
    "print_hide": 1
   },
   {
@@ -80,6 +151,36 @@
    "label": "Type of Loan",
    "options": "Mortgage\nUnsecured",
    "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "vendor",
+   "fieldtype": "Link",
+   "label": "Vendor",
+   "options": "Vendor"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_to_be_given",
+   "fieldtype": "Float",
+   "label": "Vendor Commission Total"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_already_given",
+   "fieldtype": "Float",
+   "label": "Vendor Commission Given"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "commission_due_to_give",
+   "fieldtype": "Float",
+   "label": "Vendor Commission Due",
+   "read_only": 1
+  },
+  {
+   "fieldname": "col1",
+   "fieldtype": "Column Break"
   },
   {
    "allow_on_submit": 1,
@@ -109,83 +210,66 @@
    "fieldname": "commission",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Commission",
-   "permlevel": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "vendor",
-   "fieldtype": "Link",
-   "label": "Vendor",
-   "options": "Vendor"
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "commission_to_be_given",
-   "fieldtype": "Float",
-   "label": "Commission to be given",
-   "permlevel": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "commission_already_given",
-   "fieldtype": "Float",
-   "label": "Commission already given",
-   "permlevel": 1
-  },
-  {
-   "allow_on_submit": 1,
-   "fieldname": "commission_due_to_give",
-   "fieldtype": "Float",
-   "label": "Commission due to give",
-   "permlevel": 1,
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_xkmoo",
-   "fieldtype": "Column Break"
+   "label": "Commission"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "commission_receive",
    "fieldtype": "Float",
    "in_list_view": 1,
-   "label": "Commission Received",
-   "permlevel": 1
+   "label": "Commission Received"
   },
   {
    "allow_on_submit": 1,
    "fieldname": "commission_due",
    "fieldtype": "Float",
    "label": "Commission Due",
-   "permlevel": 1,
    "read_only": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "state",
    "fieldtype": "Table",
+   "hidden": 1,
    "label": "State",
    "options": "Status",
-   "read_only": 1
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   },
   {
    "allow_on_submit": 1,
+   "default": "Draft",
    "fieldname": "status",
    "fieldtype": "Select",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Status",
    "no_copy": 1,
-   "options": "Draft\nFile Discussion\nDocuments Received\nOur Queries Given\nQueries Received\nAssessment\nLogin\nBank Login Queries\nLogin Completion\nCredit Queries\nSanction\nTechnical Assessment\nLegel Assessment\nOps\nDocket\nDisbursement\nCheques Handover\nCompletion",
+   "options": "Draft\nFile Discussion\nDocuments Received\nOur Queries Given\nQueries Received\nAssessment\nLogin\nBank Login Queries\nLogin Completion\nCredit Queries\nSanction\nTechnical Assessment\nLegel Assessment\nOps\nDocket\nDisbursement\nCheques Handover\nCompletion\nCompleted",
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Draft",
+   "fieldname": "doc_state",
+   "fieldtype": "Select",
+   "label": "State",
+   "no_copy": 1,
+   "options": "Draft\nFile Discussion\nDocuments Received\nOur Queries Given\nQueries Received\nAssessment\nLogin\nBank Login Queries\nLogin Completion\nCredit Queries\nSanction\nTechnical Assessment\nLegel Assessment\nOps\nDocket\nDisbursement\nCheques Handover\nCompletion\nCompleted",
    "read_only": 1
   },
   {
    "allow_on_submit": 1,
    "fieldname": "status_history",
    "fieldtype": "Text Editor",
+   "hidden": 1,
    "label": "Status History",
-   "read_only": 1
+   "print_hide": 1,
+   "read_only": 1,
+   "report_hide": 1
   },
   {
    "fieldname": "amended_from",
@@ -197,10 +281,471 @@
    "read_only": 1
   },
   {
-   "fieldname": "name1",
-   "fieldtype": "Data",
-   "label": "name",
+   "fieldname": "column_break_fvhlj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "file_discussion",
+   "fieldtype": "Check",
+   "label": "File Discussion",
    "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "documents_received",
+   "fieldtype": "Check",
+   "label": "Documents Received",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "our_queries_given",
+   "fieldtype": "Check",
+   "label": "Our Queries Given",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "queries_received",
+   "fieldtype": "Check",
+   "label": "Queries Received",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "assessment",
+   "fieldtype": "Check",
+   "label": "Assessment",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "login",
+   "fieldtype": "Check",
+   "label": "Login",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "bank_login_queries",
+   "fieldtype": "Check",
+   "label": "Bank Login Queries",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "credit_queries",
+   "fieldtype": "Check",
+   "label": "Credit Queries",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "login_completion",
+   "fieldtype": "Check",
+   "label": "Login Completion",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "sanction",
+   "fieldtype": "Check",
+   "label": "Sanction",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "technical_assessment",
+   "fieldtype": "Check",
+   "label": "Technical Assessment",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "legel_assessment",
+   "fieldtype": "Check",
+   "label": "Legel Assessment",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "ops",
+   "fieldtype": "Check",
+   "label": "Ops",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "docket",
+   "fieldtype": "Check",
+   "label": "Docket",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "disbursement",
+   "fieldtype": "Check",
+   "label": "Disbursement",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "cheques_handover",
+   "fieldtype": "Check",
+   "label": "Cheques Handover",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_1vmej",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "submit",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit1",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert1",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit2",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert2",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit3",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert3",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit4",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert4",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit5",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert5",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit6",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert6",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit7",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert7",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit8",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert8",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit9",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert9",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit10",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert10",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit11",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert11",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit12",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert12",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit13",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert13",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit14",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert14",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "fieldname": "submit15",
+   "fieldtype": "Button",
+   "label": "Submit"
+  },
+  {
+   "fieldname": "revert15",
+   "fieldtype": "Button",
+   "label": "Revert"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "file_discussion_state",
+   "fieldtype": "Select",
+   "label": "File Discussion",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "documents_received_state",
+   "fieldtype": "Select",
+   "label": "Documents Received",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "our_queries_given_state",
+   "fieldtype": "Select",
+   "label": "Our Queries Given",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "queries_received_state",
+   "fieldtype": "Select",
+   "label": "Queries Received",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "assessment_state",
+   "fieldtype": "Select",
+   "label": "Assessment",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "login_state",
+   "fieldtype": "Select",
+   "label": "Login",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "bank_login_queries_state",
+   "fieldtype": "Select",
+   "label": "Bank Login Queries",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "login_completion_state",
+   "fieldtype": "Select",
+   "label": "Login Completion",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "credit_queries_state",
+   "fieldtype": "Select",
+   "label": "Credit Queries",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "sanction_state",
+   "fieldtype": "Select",
+   "label": "Sanction",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "technical_assessment_state",
+   "fieldtype": "Select",
+   "label": "Technical Assessment",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "legel_assessment_state",
+   "fieldtype": "Select",
+   "label": "Legel Assessment",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "ops_state",
+   "fieldtype": "Select",
+   "label": "Ops",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "docket_state",
+   "fieldtype": "Select",
+   "label": "Docket",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "disbursement_state",
+   "fieldtype": "Select",
+   "label": "Disbursement",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Pending",
+   "fieldname": "cheques_handover_state",
+   "fieldtype": "Select",
+   "label": "Cheques Handover",
+   "options": "Pending\nCompleted",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "file_completed",
+   "fieldtype": "Check",
+   "label": "File Completed",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "file_completed_state",
+   "fieldtype": "Select",
+   "label": "Completion of File",
+   "options": "Pending\nCompleted"
+  },
+  {
+   "default": "0",
+   "fieldname": "file_is_submittable",
+   "fieldtype": "Check",
+   "label": "file_is_submittable"
+  },
+  {
+   "default": "0",
+   "fieldname": "file_vendor_is_submittable",
+   "fieldtype": "Check",
+   "label": "file_vendor_is_submittable"
   }
  ],
  "index_web_pages_for_search": 1,
@@ -230,7 +775,7 @@
  "sort_order": "DESC",
  "states": [
   {
-   "color": "Orange",
+   "color": "Blue",
    "title": "File Discussion"
   },
   {
@@ -290,8 +835,12 @@
    "title": "Disbursement"
   },
   {
-   "color": "Green",
+   "color": "Blue",
    "title": "Cheques Handover"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
   }
  ],
  "track_changes": 1
